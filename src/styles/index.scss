@@ -1,0 +1,166 @@
+@import './colors.scss';
+.container {
+  max-width: 390px;
+  margin: 0 auto;
+
+  h1,
+  p {
+    margin: 0;
+  }
+  color: $text-primary;
+}
+
+.form-container {
+  padding: 12px;
+  height: 100vh;
+  background-color: $background-primary;
+
+  .form-login {
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    input {
+      height: 1.5rem;
+      padding: 1px 4px;
+      border-radius: 8px;
+      border-color: $text-tertier;
+    }
+
+    .div-input-password {
+      position: relative;
+
+      .input-password {
+        width: 97%;
+        display: block;
+      }
+
+      .button-eye {
+        position: absolute;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        right: 5px;
+        top: 0px;
+        bottom: 0px;
+
+        .img-eye {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: $button-color;
+    border-color: $button-color;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    color: $text-primary;
+    font-weight: 600;
+    font-size: 14px;
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $text-secondary;
+      border-color: $text-secondary;
+    }
+  }
+}
+
+.input-error-message {
+  margin-top: 1px !important;
+  font-size: 14px;
+  font-weight: 500;
+  color: red;
+}
+
+.home-page {
+  position: relative;
+  padding: 12px;
+  max-height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: $background-primary;
+
+  .header-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  .div-news {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .card-news {
+      background-color: $backgorund-secondary;
+      border-radius: 20px;
+      padding: 21px;
+
+      .header-news {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .title {
+          color: $text-secondary;
+          font-size: 16px;
+        }
+
+        .created-date {
+          color: $text-secondary;
+          opacity: 56%;
+          font-size: 12px;
+        }
+      }
+      .description {
+        color: $text-tertier;
+        font-size: 14px;
+      }
+
+      .divider {
+        border-top: 1px solid $divider-color;
+        border-color: $divider-color;
+        margin: 10px 0;
+      }
+      .button-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .div-button {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 3px;
+
+          span {
+            color: $text-secondary;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  button {
+    padding: 10px;
+    background-color: $button-color;
+    border-color: $button-color;
+    // width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    color: $text-primary;
+    font-weight: 600;
+    font-size: 14px;
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $text-secondary;
+      border-color: $text-secondary;
+    }
+  }
+}
